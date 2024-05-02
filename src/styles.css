@@ -10,3 +10,7 @@
 .list {
     text-align: center;
 }
+
+.textInItalic {
+    font-style: italic;
+}

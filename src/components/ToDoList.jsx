@@ -1,6 +1,6 @@
-const ToDoList = ({list}) => {
+const ToDoList = ({ list,onEmptyButtonClick }) => {
 
-    const todos = list.map( (todo) => {
+    const todos = list.map((todo) => {
         return (
             <ol key={todo}>
                 {todo}
@@ -8,9 +8,13 @@ const ToDoList = ({list}) => {
         );
     });
     return (
-        <div className="list">
-            {list ? todos : ""}
-        </div>
+        <>
+            <div className="list">
+                {(list.length > 1) ? todos : <h4 className="textInItalic">Nothing to do buddy. Sleep!</h4>}
+            </div>
+            { (list.length > 1) ? 
+                <button className="button" onClick={onEmptyButtonClick} >Empty</button> : ''  }
+        </>
     );
 }
 
