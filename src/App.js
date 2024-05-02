@@ -1,12 +1,14 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import ToDoList from "./components/ToDoList";
 import "./styles.css";
 
 export default function App() {
+  const [list, setList] = useState(["Read SpringBoot", "Complete assignments", "Prepare breakfast", "Sleep for 2 hours", "Take a shower"]);
   return (
     <>
       <Header />
-      <ToDoList />
+      <ToDoList list={list} />
     </>
   );
 }

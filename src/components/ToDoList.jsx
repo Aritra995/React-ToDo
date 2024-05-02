@@ -1,10 +1,16 @@
-const ToDoList = () => {
+const ToDoList = ({list}) => {
+
+    const todos = list.map( (todo) => {
+        return (
+            <ol key={todo}>
+                {todo}
+            </ol>
+        );
+    });
     return (
-        <>
-            <div className="list">
-                Nothing to do buddy. Sleep!!
-            </div>
-        </>
+        <div className="list">
+            {list ? todos : ""}
+        </div>
     );
 }
 
