@@ -4,13 +4,29 @@
 }
 
 .Header {
-    text-align: center;
+    text-align: center !important;
 }
 
 .list {
     text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2rem;
+}
+
+.list :hover {
+    cursor: pointer;
 }
 
 .textInItalic {
     font-style: italic;
+}
+
+.strikeThroughText {
+    text-decoration: line-through;
+}
+
+.button {
+    margin-top: 2rem;
+    margin-left: 44%;
 }
